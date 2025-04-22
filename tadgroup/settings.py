@@ -36,7 +36,7 @@ SECRET_KEY = 'django-insecure-dxpw45)5xpr8vzr%kd4iz)#_6xuz_)eeb2qs458uu$pzm=m5y=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["192.168.1.100", "localhost", "127.0.0.1",'*', '.vercel.app']
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -114,15 +114,21 @@ WSGI_APPLICATION = 'tadgroup.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL')) {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'hrms',
-        'USER': 'ankon',
-        'PASSWORD': 'ankon12345',
-        'HOST': 'localhost',  # Change if using a remote database
-        'PORT': '5432',  # Default PostgreSQL port
-    }
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL')
+    )
 }
+
+# DATABASES = {
+#     'default': dj_database_url.config(default=os.environ.get('DATABASE_URL')) {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'hrms',
+#         'USER': 'ankon',
+#         'PASSWORD': 'ankon12345',
+#         'HOST': 'localhost',  # Change if using a remote database
+#         'PORT': '5432',  # Default PostgreSQL port
+#     }
+# }
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
