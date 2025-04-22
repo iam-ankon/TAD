@@ -112,7 +112,7 @@ WSGI_APPLICATION = 'tadgroup.wsgi.application'
 # }
 
 DATABASES = {
-    'default': {
+    'default':  {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'hrms',
         'USER': 'ankon',
